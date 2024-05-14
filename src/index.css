@@ -12,6 +12,8 @@ body {
   --black: #000;
   --light-lav: #e3eaf1;
   --box-shadow: 0px 4px 10px rgba(23,32,90,0.15);
+  --box-shadow-blue: 0 .125rem .25rem 0 #696cff66;
   --red: #c00;
   --pink: #e22454;
+  --blue: #696cff;
 }
