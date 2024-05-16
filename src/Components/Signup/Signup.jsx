@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../img/logo.png'
 import '../Signup/Signup.css'
 
 const Signup = () => {
+    const [responseData, setResponseData] = useState([]);
+
     const handleRegisterUser = async () => {
         let namevalidated = false;
         let emailvalidated = false;
@@ -12,6 +14,7 @@ const Signup = () => {
         var email = document.getElementById('useremail').value;
         var password = document.getElementById('userpassword').value;
         var confirmpassword = document.getElementById('userconfirmpassword').value;
+        let responseData;
 
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -60,8 +63,29 @@ const Signup = () => {
 
         if (namevalidated && emailvalidated && passwordvalidated && confirmpasswordvalidated) {
             // run save user code here
+            const userobj = {
+                'name': name,
+                'email': email,
+                'password': password
+            }
+
+            await fetch('https://ecom-api-tau.vercel.app/register', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(userobj)
+            }).then((res) => res.json()).then((data) => {
+                setResponseData(data)
+            });
         }
     }
+
+    useEffect(()=> {
+        localStorage.setItem('loginUser', responseData.email)
+    }, [responseData])
+
   return (
     <div className='signup-main-container'>
         <div className="logo-container">

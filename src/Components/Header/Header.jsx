@@ -159,8 +159,8 @@ const Header = () => {
                         <i class="bi bi-person"></i>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Login</a></li>
-                        <li><a class="dropdown-item" href="/">Register</a></li>
+                        <li><a class="dropdown-item" href="/login">Login</a></li>
+                        <li><a class="dropdown-item" href="/register">Register</a></li>
                     </ul>
                 </div>
                 <div style={{position: 'relative'}}><i class="bi bi-heart"></i> <span>0</span></div>

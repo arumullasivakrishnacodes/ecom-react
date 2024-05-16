@@ -89,3 +89,39 @@
         }
     }
 }
+
+.alert-message-container {
+    .alert-danger {
+        .alert-icon {
+            margin-right: 6px;
+            color: var(--red);
+        }
+    
+        .alert-message-alert {
+            color: var(--red);
+        }
+    }
+
+    .alert-success {
+        .alert-icon {
+            margin-right: 10px;
+            color: var(--green);
+        }
+    
+        .alert-message-alert {
+            color: var(--green);
+        }
+    }
+
+    .alert-primary {
+        .alert-icon {
+            margin-right: 10px;
+            color: var(--blue);
+        }
+    
+        .alert-message-alert {
+            color: var(--blue);
+        }
+    }
+    
+}
