@@ -68,7 +68,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
-        <div className="global-header-container row">
+        <div className="global-header-container">
             <div className="logo-container col-3">
                 <img src={logo} alt="logo" />
                 <p>Shopi</p>
