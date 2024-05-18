@@ -2,9 +2,9 @@ import React from 'react';
 import '../Hero/Hero.css'
 import herobanner1 from '../../img/herobanner/s-1.jpg';
 import herobanner2 from '../../img/herobanner/s-2.jpg';
-import offer1 from '../../img/herobanner/offer1.jpg';
-import offer2 from '../../img/herobanner/offer2.jpg';
-import offer3 from '../../img/herobanner/offer3.jpg';
+import herobanner3 from '../../img/herobanner/furnhero3.png';
+import herobanner4 from '../../img/herobanner/furnhero2.png';
+import herobanner5 from '../../img/herobanner/offer4.jpg';
 
 const Hero = () => {
   return (
@@ -13,6 +13,9 @@ const Hero = () => {
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -33,10 +36,10 @@ const Hero = () => {
                                         Size
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">S</a></li>
-                                        <li><a class="dropdown-item" href="#">M</a></li>
-                                        <li><a class="dropdown-item" href="#">XL</a></li>
-                                        <li><a class="dropdown-item" href="#">XXL</a></li>
+                                        <li><a class="dropdown-item" href="/">S</a></li>
+                                        <li><a class="dropdown-item" href="/">M</a></li>
+                                        <li><a class="dropdown-item" href="/">XL</a></li>
+                                        <li><a class="dropdown-item" href="/">XXL</a></li>
                                     </ul>
                                 </div>
 
@@ -45,11 +48,11 @@ const Hero = () => {
                                         Colour
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Black</a></li>
-                                        <li><a class="dropdown-item" href="#">Olive</a></li>
-                                        <li><a class="dropdown-item" href="#">Beach</a></li>
-                                        <li><a class="dropdown-item" href="#">Red</a></li>
-                                        <li><a class="dropdown-item" href="#">Smoke</a></li>
+                                        <li><a class="dropdown-item" href="/">Black</a></li>
+                                        <li><a class="dropdown-item" href="/">Olive</a></li>
+                                        <li><a class="dropdown-item" href="/">Beach</a></li>
+                                        <li><a class="dropdown-item" href="/">Red</a></li>
+                                        <li><a class="dropdown-item" href="/">Smoke</a></li>
                                     </ul>
                                 </div>
 
@@ -58,11 +61,11 @@ const Hero = () => {
                                         Qty
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">1</a></li>
-                                        <li><a class="dropdown-item" href="#">2</a></li>
-                                        <li><a class="dropdown-item" href="#">3</a></li>
-                                        <li><a class="dropdown-item" href="#">4</a></li>
-                                        <li><a class="dropdown-item" href="#">5</a></li>
+                                        <li><a class="dropdown-item" href="/">1</a></li>
+                                        <li><a class="dropdown-item" href="/">2</a></li>
+                                        <li><a class="dropdown-item" href="/">3</a></li>
+                                        <li><a class="dropdown-item" href="/">4</a></li>
+                                        <li><a class="dropdown-item" href="/">5</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -77,6 +80,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item">
                     <div className="row hero-banner-item-container">
                     <div className="col-4 hero-banner-item-details">
@@ -95,10 +99,10 @@ const Hero = () => {
                                     Size
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">S</a></li>
-                                    <li><a class="dropdown-item" href="#">M</a></li>
-                                    <li><a class="dropdown-item" href="#">XL</a></li>
-                                    <li><a class="dropdown-item" href="#">XXL</a></li>
+                                    <li><a class="dropdown-item" href="/">S</a></li>
+                                    <li><a class="dropdown-item" href="/">M</a></li>
+                                    <li><a class="dropdown-item" href="/">XL</a></li>
+                                    <li><a class="dropdown-item" href="/">XXL</a></li>
                                 </ul>
                             </div>
 
@@ -107,11 +111,11 @@ const Hero = () => {
                                     Colour
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Black</a></li>
-                                    <li><a class="dropdown-item" href="#">Olive</a></li>
-                                    <li><a class="dropdown-item" href="#">Beach</a></li>
-                                    <li><a class="dropdown-item" href="#">Red</a></li>
-                                    <li><a class="dropdown-item" href="#">Smoke</a></li>
+                                    <li><a class="dropdown-item" href="/">Black</a></li>
+                                    <li><a class="dropdown-item" href="/">Olive</a></li>
+                                    <li><a class="dropdown-item" href="/">Beach</a></li>
+                                    <li><a class="dropdown-item" href="/">Red</a></li>
+                                    <li><a class="dropdown-item" href="/">Smoke</a></li>
                                 </ul>
                             </div>
 
@@ -120,11 +124,11 @@ const Hero = () => {
                                     Qty
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">1</a></li>
-                                    <li><a class="dropdown-item" href="#">2</a></li>
-                                    <li><a class="dropdown-item" href="#">3</a></li>
-                                    <li><a class="dropdown-item" href="#">4</a></li>
-                                    <li><a class="dropdown-item" href="#">5</a></li>
+                                    <li><a class="dropdown-item" href="/">1</a></li>
+                                    <li><a class="dropdown-item" href="/">2</a></li>
+                                    <li><a class="dropdown-item" href="/">3</a></li>
+                                    <li><a class="dropdown-item" href="/">4</a></li>
+                                    <li><a class="dropdown-item" href="/">5</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -136,6 +140,162 @@ const Hero = () => {
                     </div>
                         <div className="col-8 hero-banner-item-large-image">
                             <img src={herobanner2} class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div className="row hero-banner-item-container">
+                    <div className="col-4 hero-banner-item-details">
+                        <h1 className='prd-name'>White Chair</h1>
+                        <div className="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div className="prd-price">₹ 10999 <span className="stike-through">₹ 15999</span></div>
+                        <div className="prd-variations d-flex">
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Colour
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">Black</a></li>
+                                    <li><a class="dropdown-item" href="/">Olive</a></li>
+                                    <li><a class="dropdown-item" href="/">Beach</a></li>
+                                    <li><a class="dropdown-item" href="/">Red</a></li>
+                                    <li><a class="dropdown-item" href="/">Smoke</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Qty
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">1</a></li>
+                                    <li><a class="dropdown-item" href="/">2</a></li>
+                                    <li><a class="dropdown-item" href="/">3</a></li>
+                                    <li><a class="dropdown-item" href="/">4</a></li>
+                                    <li><a class="dropdown-item" href="/">5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="button-container">
+                            <button>Add To Cart</button>
+                            <button><i class="bi bi-heart-fill"></i></button>
+                        </div>
+                        <p className="sharewith">Share with <span><i class="bi bi-whatsapp"></i></span> <span><i class="bi bi-instagram"></i></span> <span><i class="bi bi-twitter"></i></span></p>
+                    </div>
+                        <div className="col-8 hero-banner-item-large-image">
+                            <img src={herobanner3} class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div className="row hero-banner-item-container">
+                    <div className="col-4 hero-banner-item-details">
+                        <h1 className='prd-name'>Standup Chair</h1>
+                        <div className="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div className="prd-price">₹ 12999 <span className="stike-through">₹ 18999</span></div>
+                        <div className="prd-variations d-flex">
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Colour
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">Black</a></li>
+                                    <li><a class="dropdown-item" href="/">Olive</a></li>
+                                    <li><a class="dropdown-item" href="/">Beach</a></li>
+                                    <li><a class="dropdown-item" href="/">Red</a></li>
+                                    <li><a class="dropdown-item" href="/">Smoke</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Qty
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">1</a></li>
+                                    <li><a class="dropdown-item" href="/">2</a></li>
+                                    <li><a class="dropdown-item" href="/">3</a></li>
+                                    <li><a class="dropdown-item" href="/">4</a></li>
+                                    <li><a class="dropdown-item" href="/">5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="button-container">
+                            <button>Add To Cart</button>
+                            <button><i class="bi bi-heart-fill"></i></button>
+                        </div>
+                        <p className="sharewith">Share with <span><i class="bi bi-whatsapp"></i></span> <span><i class="bi bi-instagram"></i></span> <span><i class="bi bi-twitter"></i></span></p>
+                    </div>
+                        <div className="col-8 hero-banner-item-large-image">
+                            <img src={herobanner4} class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div className="row hero-banner-item-container">
+                    <div className="col-4 hero-banner-item-details">
+                        <h1 className='prd-name'>Smart Watch</h1>
+                        <div className="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div className="prd-price">₹ 1999 <span className="stike-through">₹ 4999</span></div>
+                        <div className="prd-variations d-flex">
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Colour
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">Black</a></li>
+                                    <li><a class="dropdown-item" href="/">Olive</a></li>
+                                    <li><a class="dropdown-item" href="/">Beach</a></li>
+                                    <li><a class="dropdown-item" href="/">Red</a></li>
+                                    <li><a class="dropdown-item" href="/">Smoke</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Qty
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/">1</a></li>
+                                    <li><a class="dropdown-item" href="/">2</a></li>
+                                    <li><a class="dropdown-item" href="/">3</a></li>
+                                    <li><a class="dropdown-item" href="/">4</a></li>
+                                    <li><a class="dropdown-item" href="/">5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="button-container">
+                            <button>Add To Cart</button>
+                            <button><i class="bi bi-heart-fill"></i></button>
+                        </div>
+                        <p className="sharewith">Share with <span><i class="bi bi-whatsapp"></i></span> <span><i class="bi bi-instagram"></i></span> <span><i class="bi bi-twitter"></i></span></p>
+                    </div>
+                        <div className="col-8 hero-banner-item-large-image">
+                            <img src={herobanner5} class="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>

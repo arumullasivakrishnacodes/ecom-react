@@ -4,6 +4,8 @@ import Home from './Pages/Home';
 import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
+import PLP from './Pages/PLP';
+import PDP from './Pages/PDP';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Signup />} />
+          <Route path='/shop' element={<PLP />} />
+          <Route path='/product/:id' element={<PDP />} />
         </Routes>
       </BrowserRouter>
     </div>

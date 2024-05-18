@@ -1,0 +1,48 @@
+.plp-filters-section-con {
+    #accordionExample {
+        .accordion-item {
+            margin-bottom: 14px;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .custom-checkbox-list {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+        }
+        
+        .custom-checkbox-list li {
+            position: relative;
+            padding-left: 34px; /* Space for the checkbox */
+            margin-bottom: 10px; /* Optional: spacing between list items */
+            cursor: pointer;
+        }
+        
+        .custom-checkbox-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px; /* Width of the checkbox */
+            height: 20px; /* Height of the checkbox */
+            border: 1px solid #c7ced5; /* Checkbox border */
+            background-color: #fff; /* Checkbox background color */
+            border-radius: 3px; /* Optional: rounded corners for the checkbox */
+            box-sizing: border-box;
+        }
+        
+        /* Optional: Add a checkmark to indicate selected state */
+        .custom-checkbox-list li.checked::before {
+            background-color: var(--white); /* Checkbox checked background color */
+            content: '✔'; /* Unicode character for checkmark */
+            color: var(--blue); /* Checkmark color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px; /* Adjust font size for the checkmark */
+        }
+        
+    }
+}

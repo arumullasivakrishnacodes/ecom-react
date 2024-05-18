@@ -31,6 +31,7 @@
             column-gap: 10px;
             align-items: center;
             justify-content: flex-start;
+            cursor: pointer;
 
             img {
                 width: 35px;
