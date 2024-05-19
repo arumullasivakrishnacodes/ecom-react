@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <div className='header-component'>
         <div className="promotion-container row">
-            <div className="col-3">Shopi ecommerce always free delivery</div>
+            <div className="col-3">Shopi always free delivery</div>
             <div className="col-3">New Customer Extra 50% Off</div>
             <div className="col-3">Offer Coupon Code: <span>SHOPI499</span></div>
             <div className="col-3 login-elements">

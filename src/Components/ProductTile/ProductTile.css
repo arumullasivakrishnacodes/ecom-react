@@ -90,6 +90,14 @@
                 font-size: 20px;
                 font-weight: 600;
                 margin: 0;
+
+                .strike-through {
+                    font-weight: 300;
+                    text-decoration-line: line-through;
+                    font-style: italic;
+                    margin-left: 4px;
+                    color: #aaa6a6;
+                }
             }
 
             .rating {
@@ -112,6 +120,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             padding: 0 24px;
+            text-transform: capitalize;
         }
     }
 }

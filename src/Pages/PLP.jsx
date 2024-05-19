@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PlpFilters from '../Components/PlpFilters/PlpFilters'
 import ProductTile from '../Components/ProductTile/ProductTile'
 
 const PLP = () => {
+    const [allProducts, setAllProducts]= useState(null)
+
+    const fetchProducts = async () => {
+        await fetch('https://ecom-api-tau.vercel.app/allproducts')
+        .then(res => res.json())
+        .then(data => setAllProducts(data))
+    }
+
+    useEffect(()=> {
+        fetchProducts();
+    })
+
   return (
     <div className='w-100 p-5'>
         <div className='plp-main-container row'>
@@ -28,7 +40,18 @@ const PLP = () => {
                 </div>
                 
                 <div className="productTiles-container">
-                    <ProductTile />
+                    {
+                        allProducts && allProducts.length > 0 ? (
+                            allProducts.map((product) => {
+                                return (
+                                    <ProductTile key={product.id} product={product} />
+                                );
+                            })
+                        ) : (
+                            <p>No products available.</p>
+                        )
+                    }
+                    
                 </div>
             </div>
         </div>
