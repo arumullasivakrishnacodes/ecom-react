@@ -52,32 +52,26 @@
             align-items: center;
             justify-content: flex-start;
 
-            .home-dropdown-container, .shop-dropdown-container, .store-dropdown-container {
-                display: flex;
-                column-gap: 14px;
+            .home-global-head {
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
+                color: var(--black);
 
-                .category-item {
-                    width: 168px;
-                    height: 212px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-
-                    img {
-                        width: 100%;
-                        height: 90%;
-                        margin-bottom: 12px;
-                    }
-
-                    p {
-                        font-size: 14px;
-                        margin: 0;
-                        font-weight: 700;
-                    }
+                &:hover {
+                    text-decoration: none;
                 }
             }
+
+            .dropdown-toggle {
+                background: none;
+                border: none;
+                outline: none;
+                color: var(--black);
+                font-size: 16px;
+                font-weight: 600;
+            }
+
         }
 
         .div-drop {
@@ -122,6 +116,13 @@
         .currency {
             cursor: pointer;
             font-weight: 400;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--black);
         }
     }
 
