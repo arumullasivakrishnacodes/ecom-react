@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import PlpFilters from '../Components/PlpFilters/PlpFilters'
 import ProductTile from '../Components/ProductTile/ProductTile'
+import { ShopContext } from '../Context/ShopContext'
 
 const PLP = () => {
-    const [allProducts, setAllProducts]= useState(null)
-
-    const fetchProducts = async () => {
-        await fetch('https://ecom-api-tau.vercel.app/allproducts')
-        .then(res => res.json())
-        .then(data => setAllProducts(data))
-    }
-
-    useEffect(()=> {
-        fetchProducts();
-    })
+    const {allProducts} = useContext(ShopContext)
 
   return (
     <div className='w-100 p-5'>

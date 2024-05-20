@@ -73,3 +73,157 @@
     gap: 20px;
 }
 
+.new-arrivals-main-container {
+    padding: 0 5rem;
+    width: 100%;
+
+    .slick-track {
+        display: flex;
+        column-gap: 24px;
+    }
+
+    .slick-dots {
+        bottom: -45px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 10px;
+        content: '';
+        background: gray;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        opacity: 1;
+    }
+
+    .slick-dots li.slick-active {
+        width: 55px;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: var(--blue);
+        opacity: 1;
+        width: 55px;
+        border-radius: 25px;
+        background: var(--blue);
+    }
+
+    .slick-prev:before, .slick-next:before {
+        font-size: 34px;
+        color: var(--black);
+    }
+
+    .heading-sec {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 22px;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: gray;
+        }
+    }
+}
+
+.categories-list-div {
+    width: 100%;
+    padding: 0 5rem;
+    margin-top: 90px;
+    margin-bottom: 30px;
+
+    .heading-sec {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 22px;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: gray;
+        }
+    }
+
+    .our-categories-main-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        img {
+            width: 100%;
+            aspect-ratio: 9/6;
+            cursor: pointer;
+        }
+    }
+
+    .desc-of-img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        p {
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 14px 0;
+        }
+    }
+}
+
+.deal-of-the-day-con {
+    width: 100%;
+    padding: 3rem 6rem;
+
+    .deal-item {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-image: url('../src//img//images//dealoftheDay.jpg');
+        background-repeat: no-repeat;
+        position: relative;
+
+        .offer-display-card {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            width: fit-content;
+            height: fit-content;
+            padding: 18px 24px;
+            background: var(--blue);
+            border: 1px solid var(--blue);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 6px;
+            }
+        }
+    }
+}
