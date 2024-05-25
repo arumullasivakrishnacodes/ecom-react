@@ -7,6 +7,7 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
 
     const [productData, setProductData]= useState(null)
     const [similarProducts, setSimilarProducts] = useState(null)
+    const [additionaldetailsselect, setAdditionaldetSelect] = useState('ad1')
 
     const fetchProducts = async () => {
         await fetch(`https://ecom-api-tau.vercel.app/allproducts/${productid}`)
@@ -22,27 +23,7 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
 
     const handleAdditionalDetailsView = (e) => {
         var adddescid = e.target.dataset.id;
-
-        this.classList.add('active');
-        Array.from(this.parentNode.children).forEach(function(sibling) {
-            if (sibling !== this) {
-                sibling.classList.remove('active');
-            }
-        }, this);
-
-        // Get all elements with the class 'additional-details-item-contents-storage' and add 'd-none' class to each
-        var elements = document.getElementsByClassName('additional-details-item-contents-storage');
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].classList.add('d-none');
-        }
-        
-        // Get the element by ID and remove 'd-none' class if it exists
-        var targetElement = document.getElementById(adddescid);
-        if (targetElement) {
-            targetElement.classList.remove('d-none');
-        } else {
-            console.error(`Element with ID ${adddescid} not found.`);
-        }
+        setAdditionaldetSelect(adddescid)
     };
     
     
@@ -131,18 +112,18 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
 
                 <div className="product-additional-details-section">
                     <div className="product-detail-section-head">
-                        <div data-id='ad1'  className="head-item active" onClick={handleAdditionalDetailsView}>Description</div>
-                        <div data-id='ad2'  className="head-item" onClick={handleAdditionalDetailsView}>Specifications</div>
-                        <div data-id='ad3'  className="head-item" onClick={handleAdditionalDetailsView}>Size Guide</div>
-                        <div data-id='ad4'  className="head-item" onClick={handleAdditionalDetailsView}>Q & A</div>
-                        <div data-id='ad5'  className="head-item" onClick={handleAdditionalDetailsView}>Reviews</div>
+                        <div data-id={`ad1`}  className={`head-item ${additionaldetailsselect === 'ad1' ? 'active' : ''}`} onClick={handleAdditionalDetailsView}>Description</div>
+                        <div data-id={`ad2`}  className={`head-item ${additionaldetailsselect === 'ad2' ? 'active' : ''}`} onClick={handleAdditionalDetailsView}>Specifications</div>
+                        <div data-id={`ad3`}  className={`head-item ${additionaldetailsselect === 'ad3' ? 'active' : ''}`} onClick={handleAdditionalDetailsView}>Size Guide</div>
+                        <div data-id={`ad4`}  className={`head-item ${additionaldetailsselect === 'ad4' ? 'active' : ''}`} onClick={handleAdditionalDetailsView}>Q & A</div>
+                        <div data-id={`ad5`}  className={`head-item ${additionaldetailsselect === 'ad5' ? 'active' : ''}`} onClick={handleAdditionalDetailsView}>Reviews</div>
                     </div>
 
-                    <div className="additional-details-item-contents-storage" id='ad1'>Description</div>
-                    <div className="additional-details-item-contents-storage d-none" id='ad2'>Specifications</div>
-                    <div className="additional-details-item-contents-storage d-none" id='ad3'>Size</div>
-                    <div className="additional-details-item-contents-storage d-none" id='ad4'>Q&A</div>
-                    <div className="additional-details-item-contents-storage d-none" id='ad5'>Reviews</div>
+                    <div className={`additional-details-item-contents-storage ${additionaldetailsselect === 'ad1' ? '' : 'd-none'}`} id='ad1'>Description</div>
+                    <div className={`additional-details-item-contents-storage ${additionaldetailsselect === 'ad2' ? '' : 'd-none'}`} id='ad2'>Specifications</div>
+                    <div className={`additional-details-item-contents-storage ${additionaldetailsselect === 'ad3' ? '' : 'd-none'}`} id='ad3'>Size</div>
+                    <div className={`additional-details-item-contents-storage ${additionaldetailsselect === 'ad4' ? '' : 'd-none'}`} id='ad4'>Q&A</div>
+                    <div className={`additional-details-item-contents-storage ${additionaldetailsselect === 'ad5' ? '' : 'd-none'}`} id='ad5'>Reviews</div>
                 </div>
 
                 <div className="similar-prds-heading">SIMILAR PRODUCTS</div>
