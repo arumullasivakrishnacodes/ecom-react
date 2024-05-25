@@ -18,6 +18,8 @@
             padding: 8px 16px;
             border-radius: 20px;
             border: 1px solid #c7ced5;
+            background: var(--light-lav);
+            box-shadow: var(--box-shadow);
 
             i {
                 font-size: 14px;
@@ -58,6 +60,7 @@
         &.active {
             background: var(--blue);
             color: var(--white);
+            box-shadow: var(--box-shadow-blue);
         }
     }
 

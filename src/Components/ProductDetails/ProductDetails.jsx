@@ -20,6 +20,33 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
         .then(data => setSimilarProducts(data))
     }
 
+    const handleAdditionalDetailsView = (e) => {
+        var adddescid = e.target.dataset.id;
+
+        this.classList.add('active');
+        Array.from(this.parentNode.children).forEach(function(sibling) {
+            if (sibling !== this) {
+                sibling.classList.remove('active');
+            }
+        }, this);
+
+        // Get all elements with the class 'additional-details-item-contents-storage' and add 'd-none' class to each
+        var elements = document.getElementsByClassName('additional-details-item-contents-storage');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.add('d-none');
+        }
+        
+        // Get the element by ID and remove 'd-none' class if it exists
+        var targetElement = document.getElementById(adddescid);
+        if (targetElement) {
+            targetElement.classList.remove('d-none');
+        } else {
+            console.error(`Element with ID ${adddescid} not found.`);
+        }
+    };
+    
+    
+
     useEffect(()=> {
         fetchProducts();
         fetchSimilarProducts();
@@ -46,10 +73,10 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
                     <div className="col-5 main-image-container">
                         <img src={productData.image} alt="" className='w-100' />
                     </div>
-                    <div className="col-6 d-flex flex-column justify-content-start align-items-start">
+                    <div className="col-6 d-flex flex-column justify-content-start align-items-start pdp-details-section-container">
                         <p className='productName'>{productData.name}</p>
                         <p className="productPrice">₹ {productData.sale_price} <span className="strike">₹ {productData.list_price}</span></p>
-                        <p className="category">{productData.category}</p>
+                        <p className="category">Category: <span>{productData.category}</span></p>
                         <div className="variants-container d-flex">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Colour</option>
@@ -100,6 +127,22 @@ const ProductDetails = ({ productid }) => {  // Destructure the productid prop
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="product-additional-details-section">
+                    <div className="product-detail-section-head">
+                        <div data-id='ad1'  className="head-item active" onClick={handleAdditionalDetailsView}>Description</div>
+                        <div data-id='ad2'  className="head-item" onClick={handleAdditionalDetailsView}>Specifications</div>
+                        <div data-id='ad3'  className="head-item" onClick={handleAdditionalDetailsView}>Size Guide</div>
+                        <div data-id='ad4'  className="head-item" onClick={handleAdditionalDetailsView}>Q & A</div>
+                        <div data-id='ad5'  className="head-item" onClick={handleAdditionalDetailsView}>Reviews</div>
+                    </div>
+
+                    <div className="additional-details-item-contents-storage" id='ad1'>Description</div>
+                    <div className="additional-details-item-contents-storage d-none" id='ad2'>Specifications</div>
+                    <div className="additional-details-item-contents-storage d-none" id='ad3'>Size</div>
+                    <div className="additional-details-item-contents-storage d-none" id='ad4'>Q&A</div>
+                    <div className="additional-details-item-contents-storage d-none" id='ad5'>Reviews</div>
                 </div>
 
                 <div className="similar-prds-heading">SIMILAR PRODUCTS</div>
