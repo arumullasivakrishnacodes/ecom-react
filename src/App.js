@@ -6,6 +6,7 @@ import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import PLP from './Pages/PLP';
 import PDP from './Pages/PDP';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/register' element={<Signup />} />
           <Route path='/shop' element={<PLP />} />
           <Route path='/product/:id' element={<PDP />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
