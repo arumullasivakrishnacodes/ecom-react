@@ -91,7 +91,7 @@ const Header = () => {
                         <li><a class="dropdown-item" href="/register">Register</a></li>
                     </ul>
                 </div>
-                <div style={{position: 'relative'}}><i class="bi bi-heart"></i> <span>0</span></div>
+                <div style={{position: 'relative'}}><a href='/wishlist'><i class="bi bi-heart"></i> </a><span>0</span></div>
                 <div style={{position: 'relative'}}><i class="bi bi-cart3"></i> <span>0</span></div>
             </div>
         </div>

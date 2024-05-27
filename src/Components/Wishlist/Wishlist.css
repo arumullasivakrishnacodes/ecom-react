@@ -1,0 +1,92 @@
+.wishlist-page-main-container {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 6rem;
+
+    .heading {
+        font-size: 32px;
+        font-weight: 600;
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-bottom: 26px;
+
+        &::after {
+            width: 90%;
+            height: 3px;
+            background: var(--blue);
+            display: block;
+            border-radius: 20px;
+        }
+    }
+
+    .wishlist-items-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .wishlist-item-container {
+            height: 160px;
+            display: flex;
+            column-gap: 1%;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 3%;
+
+            &:nth-child(odd) {
+                background: var(--light-lav);
+            }
+
+            .productImage {
+                width: 12%;
+                height: 100%;
+                padding: 20px;
+            }
+
+            .productName {
+                font-size: 20px;
+                width: 29%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-transform: capitalize;
+            }
+
+            .producCategory {
+                font-size: 16px;
+                width: 10%;
+            }
+
+            .productPrice {
+                font-size: 18px;
+                font-weight: 600;
+                width: 10%;
+            }
+
+            .remove-wishlist {
+                border: none;
+                outline: none;
+                background: var(--pink);
+                color: var(--white);
+                width: 40px;
+                height: 40px;
+            }
+
+            .addtoCart {
+                border: none;
+                outline: none;
+                background: var(--green);
+                color: var(--white);
+                width: 40px;
+                height: 40px;
+            }
+
+            .product-Variant {
+                font-size: 16px;
+                font-weight: 600;
+                width: 12%;
+            }
+        }
+
+    }
+}

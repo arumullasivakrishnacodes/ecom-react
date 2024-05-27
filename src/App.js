@@ -7,6 +7,7 @@ import Signup from './Components/Signup/Signup';
 import PLP from './Pages/PLP';
 import PDP from './Pages/PDP';
 import NotFound from './Components/NotFound/NotFound';
+import Wishlist from './Components/Wishlist/Wishlist';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Signup />} />
           <Route path='/shop' element={<PLP />} />
+          <Route path='/wishlist' element={<Wishlist />} />
           <Route path='/product/:id' element={<PDP />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
